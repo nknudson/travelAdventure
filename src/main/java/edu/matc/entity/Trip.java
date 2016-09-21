@@ -47,7 +47,7 @@ public class Trip {
     @Column (name = "cost")
     private Double cost;
 
-   // private final Logger logger = Logger.getLogger(this.getClass());
+   
     /**
      * Instantiates a new User.
      */

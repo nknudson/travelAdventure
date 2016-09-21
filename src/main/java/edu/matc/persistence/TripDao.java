@@ -10,7 +10,6 @@ import java.util.List;
  * Created by nataliya.knudson on 9/19/2016.
  */
 public class TripDao {
-
         private final Logger log = Logger.getLogger(this.getClass());
 
         /** Return a list of all trips
@@ -31,10 +30,12 @@ public class TripDao {
          * @return trip
          */
         public Trip getTrip(int id) {
+            log.info("id = " + id);
             Session session = SessionFactoryProvider.getSessionFactory().openSession();
             Trip trip = (Trip) session.get(Trip.class, id);
-
+            log.info("trip = " + trip);
             return trip;
+
         }
 
 
@@ -104,6 +105,7 @@ public class TripDao {
             try {
                 trns = session.beginTransaction();
                 session.update(trip);
+                //log.info(trip);
                 session.getTransaction().commit();
             } catch (RuntimeException e) {
                 if (trns != null) {

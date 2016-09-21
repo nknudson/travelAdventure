@@ -8,3 +8,8 @@
 | 9/12/16 | Created mockups for website pages  | 2  |Atom   |
 | 9/13/16 | Did week 2 exercise | 8  |   |
 | 9/12/16 | Reading for class | 2  |  |
+| 9/17/16 | Exercise 3 and readings | 4  |  | 
+| 9/18/16 | Exercise 3 | 2  |  |
+| 9/19/16 | Individual project and extracurricular activity | 6  |  |
+| 9/20/16 | Extracurricular activity | 3  |  |
+| 9/21/16 | Commits and readings | 4  |  |
