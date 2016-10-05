@@ -55,9 +55,14 @@ public class TripDaoTest {
 
         @Test
         public void updateTrip() throws Exception {
-            Trip updatedTrip =  dao.getTrip(7);
-            updatedTrip.setCity("Canada");
+            Trip updatedTrip =  dao.getTrip(5);
+            String currentCity = updatedTrip.getCity();
+            updatedTrip.setCity(currentCity + "x");
             dao.updateTrip(updatedTrip);
-        }
+            assertEquals((currentCity + "y"),dao.getTrip(5).getCity());
+
+            updatedTrip.setCity(currentCity);
+            dao.updateTrip(updatedTrip);
+}
 
     }

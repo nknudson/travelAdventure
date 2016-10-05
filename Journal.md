@@ -23,3 +23,28 @@ Tasks Completed:
 * Started looking for extracurricular activities
 
 I will be using Google Maps ( https://developers.google.com/maps/web-services/overview?hl=en) to show the location of the countries
+### Week 3
+
+09/14/2016
+
+Tasks Completed:
+ * Created maven project for Travel Adventure
+ * Integrated hibernate in my application
+ * Did class activities and exercise
+ * Prepared Power Point for presentation
+
+### Week 4
+
+09/21/2016
+
+Tasks Completed:
+ * Did class activities and exercise
+ * Completed peer code reviews
+
+
+### Week 5
+
+10/05/2016
+
+Tasks Completed:
+ * Did exercise 5 and readings
