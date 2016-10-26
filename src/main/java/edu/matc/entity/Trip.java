@@ -1,8 +1,11 @@
 package edu.matc.entity;
 
 import org.apache.log4j.Logger;
-import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import edu.matc.util.LocalDateAttributeConverter;
 import org.hibernate.annotations.GenericGenerator;
@@ -15,7 +18,8 @@ import static java.time.LocalDate.now;
  */
 
 @Entity
-@Table(name = "trips")
+@Table(name = "trip")
+
 
 public class Trip {
     @Column(name = "country")

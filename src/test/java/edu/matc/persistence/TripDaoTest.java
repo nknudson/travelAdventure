@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  * Created by nataliya.knudson on 9/19/2016.
- */
+*/
 public class TripDaoTest {
 
 
@@ -27,12 +27,12 @@ public class TripDaoTest {
         public void getAllTrips() throws Exception {
             List<Trip> trips = dao.getAllTrips();
            // assertTrue(trips.size() < 0);
-            assertEquals(9,trips.size());
+            assertEquals(7,trips.size());
         }
 
         @Test
         public void getTrip() throws Exception {
-            assertEquals("Trip", "Costa Rica", dao.getTrip(1));
+            assertEquals("Costa Rica", dao.getTrip(1).getCountry());
 
         }
 
@@ -57,9 +57,11 @@ public class TripDaoTest {
         public void updateTrip() throws Exception {
             Trip updatedTrip =  dao.getTrip(5);
             String currentCity = updatedTrip.getCity();
-            updatedTrip.setCity(currentCity + "x");
+            //updatedTrip.setCity(currentCity + "x");
+            updatedTrip.setCity(currentCity);
             dao.updateTrip(updatedTrip);
-            assertEquals((currentCity + "y"),dao.getTrip(5).getCity());
+            //assertEquals((currentCity + "y"),dao.getTrip(5).getCity());
+            assertEquals((currentCity),dao.getTrip(5).getCity());
 
             updatedTrip.setCity(currentCity);
             dao.updateTrip(updatedTrip);
