@@ -17,3 +17,13 @@
 | 9/30/16 | Exercise 5 | 4  |  |
 | 10/02/16 | Readings week 5| 4  |  |
 | 10/05/16 | Commits and readings | 4  |  |
+| 10/10/16 | Readings week 6| 4  |  |
+| 10/11/16 | presentation feedback, exercise 6 | 4  |  |
+| 10/12/16 | Exercise 6| 4  |  |
+| 10/17/16 | Individual prohect and exercise | 6  |  |
+| 10/18/16 | Exercise 7| 4  |  |
+| 10/19/16 | Individualproject: displaying list of trips | 6  |  |
+| 10/25/16 | Individual project: user authorization| 6  |  |
+| 10/26/16 | presentation feedback. Individual project: JSPs | 4  |  |
+| 10/31/16 | Team project| 5 |  |
+| 11/01/16 | Code review, presentation feedback, time log | 2  |  |
