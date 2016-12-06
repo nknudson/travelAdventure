@@ -48,7 +48,11 @@
     <artifactId>hibernate-core</artifactId>
     <version>4.3.11.Final</version>
   </dependency>
-
+    <dependency>
+      <groupId>edu.matc.exerciseweek9</groupId>
+      <artifactId>exerciseweek9</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>travelAdventure</finalName>

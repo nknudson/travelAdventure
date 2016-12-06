@@ -20,11 +20,8 @@
             case 'displayTrip.jsp':
                 $('#viewTrips').addClass("active");
                 break;
-            case 'addReport.jsp':
-                $('#addReport').addClass("active");
-                break;
-            case 'addTrail.jsp':
-                $('#addTrail').addClass("active");
+            case 'addTrip.jsp':
+                $('#addTrip').addClass("active");
                 break;
             case 'signInConfirmation.jsp':
                 $('#signInConfirmation').addClass("active");
@@ -48,17 +45,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-           
+
             <img src="http://cdn.adventuretravel.biz/wp-content/uploads/2014/04/ATTA-Logo-CMYK-white-URL.png?x66985" alt="Adventure Travel Trade Association" style="width: 100%;">
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li id="index"><a href="index.jsp">Welcome</a></li>
+                <li id="index"><a href="index">Welcome</a></li>
                 <li id="viewTrips"><a href="displayTrip">Trips</a></li>
-                <li id="addReport"><a href="addTrip">New
-                    Trip</a></li>
-                <li id="login"><a
-                        href="login.jsp">Sign In</a></li>
+                <li id="addTrip"><a href="addTrip">New Trip</a></li>
+                <li id="login"><a href="displaySearchedTrip.jsp">Trip</a></li>
                 <li id="signUp"><a href="signUp.jsp">Sign Up</a></li>
                 <li id="about"><a href="about.jsp">About</a></li>
 

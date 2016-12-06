@@ -20,6 +20,9 @@
             case 'displayTrip.jsp':
                 $('#viewTrips').addClass("active");
                 break;
+            case 'addTrip.jsp':
+                $('#addTrip').addClass("active");
+                break;
             case 'signInConfirmation.jsp':
                 $('#signInConfirmation').addClass("active");
                 break;
@@ -47,12 +50,10 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li id="index"><a href="index.jsp">Welcome</a></li>
+                <li id="index"><a href="index">Welcome</a></li>
                 <li id="viewTrips"><a href="displayTrip">Trips</a></li>
-                <li id="addReport"><a href="addTrip">New
-                    Trip</a></li>
-                <li id="login"><a
-                        href="login.jsp">Sign In</a></li>
+                <li id="addTrip"><a href="addTrip">New Trip</a></li>
+                <li id="login"><a href="displaySearchedTrip.jsp">Trip</a></li>
                 <li id="signUp"><a href="signUp.jsp">Sign Up</a></li>
                 <li id="about"><a href="about.jsp">About</a></li>
 

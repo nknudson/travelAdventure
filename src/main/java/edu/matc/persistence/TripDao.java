@@ -1,10 +1,13 @@
 package edu.matc.persistence;
 import edu.matc.entity.Trip;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import java.util.ArrayList;
-import java.util.List;
+import org.hibernate.criterion.Restrictions;
+
+import java.io.FileNotFoundException;
+import java.util.*;
 
 /**
  * Created by nataliya.knudson on 9/19/2016.
@@ -23,6 +26,19 @@ public class TripDao {
             return trips;
         }
 
+        public List<String> getAllCountries() {
+            List<String> countries = new ArrayList<String>();
+            Session session = SessionFactoryProvider.getSessionFactory().openSession();
+            List<Trip> trips = session.createCriteria(Trip.class).list();
+            HashSet<String> distinct_countries = new HashSet<>();
+            for (Trip trip : trips) {
+                distinct_countries.add(trip.getCountry());
+            }
+            countries.addAll(distinct_countries);
+            Collections.sort(countries);
+            return countries;
+        }
+
         /**
          * retrieve a trip given their id
          *
@@ -37,6 +53,25 @@ public class TripDao {
             return trip;
 
         }
+    /**
+     * retrieve a trip given their county
+     *
+     * @param country the trip's country
+     * @return trip
+     */
+    public Trip getTripByCountry(String country) throws FileNotFoundException {
+        log.info("Line 47 country = " + country);
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Criteria criteria = session.createCriteria(Trip.class).add(Restrictions.eq("country", country));
+        if (criteria.list().size() == 0) {
+            throw new FileNotFoundException("Country " + country + " is not found");
+        }
+        Trip trip= (Trip) criteria.list().get(0);
+        //Trip trip = (Trip) session.get(Trip.class, country);
+        log.info("Line 50 trip = " + country);
+        return trip;
+
+    }
 
 
         /**
