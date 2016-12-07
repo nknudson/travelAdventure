@@ -5,12 +5,20 @@
   Time: 2:57 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="contentType.jsp" />
+<jsp:include page="navigationBar.jsp" />
+<jsp:include page="head.jsp" />
 <html>
-<head>
-    <title>Trip added successfully</title>
-</head>
-<body>
-Your trip was successfully added. You can view it among other trips <a href="displayTrip">here</a>.
+<body role="document" style="background-color: yellow;" >
+
+<div class="container theme-showcase" role="main" class="jumbotron"  >
+    <div class="page-header" class="jumbotron">
+        <h1 style="color: blue; text-align: center">Congratulations! </h1>
+    </div>
+
+    <h3 style="text-align: center">Your trip was successfully added to the list. Click <a href="displayTrip">here</a> to view it.</h3>
+    </div>
 </body>
+<jsp:include page="contentEnd.jsp" />
+<jsp:include page="footer.jsp" />
 </html>

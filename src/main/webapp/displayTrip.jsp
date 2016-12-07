@@ -9,14 +9,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <jsp:include page="contentType.jsp" />
-<html>
 <jsp:include page="head.jsp" />
-
-<body role="document">
 <jsp:include page="navigationBar.jsp" />
-<div class="container theme-showcase" role="main">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<body style="background-color: yellow;" >
+<div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header">
-        <h1>Previous Trips</h1>
+        <h1 style="color: blue; text-align: center">All Dream Trips</h1>
     </div>
 
     <c:forEach items="${tripReports}" var="report">

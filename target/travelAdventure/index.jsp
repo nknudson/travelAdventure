@@ -9,43 +9,35 @@
   To change this template use File | Settings | File Templates.
 --%>
 <jsp:include page="contentType.jsp" />
-<html>
-<jsp:include page="head.jsp" />
-
-<body role="document">
 <jsp:include page="navigationBar.jsp" />
-<div class="container theme-showcase" role="main">
-    <div class="page-header">
-        <h1>Welcome to the Magical World of Travel </h1>
-        <p>If you are curious when is the best time to start planning your vacation the answer is...on
-        <i><nk:Date /></i> -- which is <b>TODAY</b>!
-    </div>
+<jsp:include page="head.jsp" />
+<html>
+<body role="document" style="background-color: yellow;" >
 
-   <%-- <a href = "searchTrip">Search for the country</a>--%>
-    <form  method="post" action="/travelAdventure/searchTrip">
+<div class="container theme-showcase" role="main" class="jumbotron"  >
+    <div class="page-header" class="jumbotron">
+        <h1 style="color: blue; text-align: center">Welcome to the Magical World of Travel </h1>
+</div>
+
+    <h3 style="text-align: center">If you are curious when is the best time to start planning your vacation the answer is...</h3>
+    <h2 style="text-align: center"> on <i><nk:Date /></i> -- which is <b>TODAY</b>!</h2>
+    <h3 style="text-align: center">Our website provides information on countries from all over the world! Here you can find a list of activities to do, hotels to stay and approximate budget necessary for trip expenses. </h3>
+    <h3 >Are you ready for adventure?</h3>
+    <form  method="post" action="/travelAdventure/searchTrip" role = "form" >
         <table>
-            <tr>
-                <td>Where would you like to go? Let's choose a country! </td>
-                <td>
-                    <select id="country" name="country">
-                        <c:forEach var="country" items="${countries}">
-                            <option><c:out value="${country}"/></option>
-                        </c:forEach>
-                    </select>
-                </td>
-
-            </tr>
-
 
             <tr>
-                <td><input type="submit"  value="Submit" /></td>
+                <td><h3>Then choose a country of your dreams here:   </h3>&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<select id="country" name="country"  class = "form-control" style="font-size: large">
+                    <c:forEach var="country" items="${countries}">
+                        <option><c:out value="${country}"/></option>
+                    </c:forEach>
+                </select>&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<input type="submit"  value="Submit" class="bt btn-primary btn-lg "  /></td>
             </tr>
+
         </table>
-
-
-
     </form>
-
 
 </div>
 
@@ -54,3 +46,4 @@
 <jsp:include page="contentEnd.jsp" />
 <jsp:include page="footer.jsp" />
 </html>
+

@@ -9,8 +9,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <jsp:include page="contentType.jsp" />
-<html>
 <jsp:include page="head.jsp" />
+<jsp:include page="navigationBar.jsp" />
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
@@ -29,91 +31,7 @@
     }
     </style>
 
-    <%--<script>
-    // This example requires the Places library. Include the libraries=places
-    // parameter when you first load the API. For example:
-    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-    var map;
-    var infowindow;
-
-    function initMap() {
-        var pyrmont = {lat: -33.867, lng: 151.195};
-
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: pyrmont,
-            zoom: 15
-        });
-
-        infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-            location: pyrmont,
-            radius: 500,
-            type: ['store']
-        }, callback);
-    }
-
-    function callback(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-            }
-        }
-    }
-
-    function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location
-        });
-
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent(place.name);
-            infowindow.open(map, this);
-        });
-    }
-</script>--%>
-
-    <%--var map;
-    function initialize() {
-        var mapOptions = {
-            zoom: 8,
-            center: new google.maps.LatLng(-34.397, 150.644)
-        };
-        map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);--%>
-    <%--var marker = null;
-    var map = null;
-    var markers = [];
-    function initializeMap()
-    {
-        var map_canvas = document.getElementById('map_canvas');
-        var map_options = {
-            //center: myCenter,
-            zoom: 15,
-            mapTypeId: google.maps.MapTypeId.SATELLITE
-        }
-        map = new google.maps.Map(map_canvas, map_options)
-    }
-    function updateMap(gps)
-    {
-        var latitude = "${country.latitude}";
-        var longitude = "${country.logitude}";
-        var gpsPoint = new google.maps.LatLng(latitude, longitude);
-        if(marker != null)
-            marker.setMap(null);
-        if(map!=null)
-            map.setCenter(gpsPoint);
-        marker = new google.maps.Marker({
-            position:gpsPoint,
-            map:map
-        });
-        markers.push(marker);
-    }--%>
 
     <style>
         /* Always set the map height explicitly to define the size of the div
@@ -156,16 +74,20 @@
             display: inline;
         }
 
+        .panel-heading  {
+           background-color: lightblue;
+            color: blue;
+        }
+
     </style>
 
 </head>
 
 
-<body role="document">
-<jsp:include page="navigationBar.jsp" />
-<div class="container theme-showcase" role="main">
+<body style="background-color: yellow;" >
+<div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header">
-        <h1>Selected Trip</h1>
+        <h1 style="color: blue; text-align: center">Selected Dream Trip Info</h1>
     </div>
 
 
@@ -271,6 +193,7 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA0PIMpvt1rg0PvK_PKX6pm85leZYAKfY&libraries=places&callback=initMap" async defer></script>
 
+</div>
 </div>
 </body>
 

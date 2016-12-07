@@ -5,42 +5,54 @@
   Time: 11:22 AM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="contentType.jsp" />
+<jsp:include page="navigationBar.jsp" />
+<jsp:include page="head.jsp" />
 <html>
-<head>
-    <title>Admin</title>
-</head>
-<body>
-This is the admin page where fancy admin-only stuff happens.
-<ul>
-    <li><a href="displayTrip.jsp">Take me to the Display Page</a></li>
-    <li><a href="index.jsp">Take me Home</a></li>
-</ul>
-<form  method="post" action="/travelAdventure/addTrip">
-    <table>
+<body role="document" style="background-color: yellow;" >
+
+<div class="container theme-showcase" role="main" class="jumbotron"  >
+    <div class="page-header" class="jumbotron">
+        <h1 style="color: blue; text-align: center">New Trip Form </h1>
+    </div>
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <title>ad</title>
+
+<form  method="post" action="/travelAdventure/addTrip"  class="form-horizontal" >
+    <table class="form-group">
         <tr>
-            <td>Country </td> <td><input id="country" name="country" /></td>
+            <td class="control-label col-xs-4">Country* </td> <td><input id="country" name="country" class="form-control"/></td>
         </tr>
         <tr>
-            <td>City </td> <td><input id="city" name="city" /></td>
-        </tr>
+            <td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
+
         <tr>
-            <td>Hotel</td> <td><input id="hotel" name="hotel" /></td>
+            <td class="control-label col-xs-4">City* </td> <td><input id="city" name="city" class="form-control"/></td>
         </tr>
+        <tr><td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
         <tr>
-            <td>Activity </td> <td><input id="activity" name="activity" /></td>
+            <td class="control-label col-xs-4">Hotel*</td> <td><input id="hotel" name="hotel" class="form-control"/></td>
         </tr>
+        <tr><td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
         <tr>
-            <td>Begin Date </td> <td><input id="beginDate" type="date" name="beginDate" /></td>
+            <td class="control-label col-xs-4">Activity* </td> <td><input id="activity" name="activity" class="form-control" /></td>
         </tr>
+        <tr><td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
         <tr>
-            <td>End Date </td> <td><input id="endDate" type="date"  name="endDate" /></td>
+            <td class="control-label col-xs-4" >Begin Date* </td> <td><input id="beginDate" type="date" name="beginDate"  class="form-control"/></td>
         </tr>
+        <tr><td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
         <tr>
-            <td>Cost </td> <td><input id="cost" type="number" name="cost" /></td>
+            <td class="control-label col-xs-4">End Date* </td> <td><input id="endDate" type="date"  name="endDate" class="form-control" /></td>
         </tr>
+        <tr><td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
         <tr>
-            <td><input type="submit"  value="Submit" /></td>
+            <td class="control-label col-xs-4">Cost* </td> <td><input id="cost" type="number" name="cost" class="form-control" /></td>
+        </tr>
+        <tr><td>&nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;</td></tr>
+        <tr>
+            <td></td>
+            <td class="control-label col-xs-4" ><input type="submit"  value="Submit" class="bt btn-primary btn-lg " /></td>
         </tr>
     </table>
 
@@ -49,4 +61,6 @@ This is the admin page where fancy admin-only stuff happens.
 </form>
 
 </body>
+<jsp:include page="contentEnd.jsp" />
+<jsp:include page="footer.jsp" />
 </html>

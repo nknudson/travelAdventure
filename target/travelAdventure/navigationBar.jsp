@@ -37,7 +37,7 @@
 </script>
 
 <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -46,18 +46,16 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <img src="http://cdn.adventuretravel.biz/wp-content/uploads/2014/04/ATTA-Logo-CMYK-white-URL.png?x66985" alt="Adventure Travel Trade Association" style="width: 100%;">
+            <img src="http://cdn.adventuretravel.biz/wp-content/uploads/2014/04/ATTA-Logo-CMYK-white-URL.png?x66985" alt="Adventure Travel Trade Association" style="width: 100%;"></a>
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li id="index"><a href="index">Welcome</a></li>
-                <li id="viewTrips"><a href="displayTrip">Trips</a></li>
-                <li id="addTrip"><a href="addTrip">New Trip</a></li>
-                <li id="login"><a href="displaySearchedTrip.jsp">Trip</a></li>
-                <li id="signUp"><a href="signUp.jsp">Sign Up</a></li>
-                <li id="about"><a href="about.jsp">About</a></li>
+                <li style="font-size: 20px" id="index"><a href="index">Home</a></li>
+                <li style="font-size: 20px" id="viewTrips"><a href="displayTrip"> All Trips</a></li>
+                <li style="font-size: 20px" id="addTrip"><a href="addTrip">Add a Trip</a></li>
+                <li style="font-size: 20px" id="signUp"><a href="signUp.jsp">Sign Up</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
-    </div>
+        </div>
 </nav>
