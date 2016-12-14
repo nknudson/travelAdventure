@@ -13,12 +13,12 @@
 <jsp:include page="navigationBar.jsp" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<body style="background-color: yellow;" >
+<div class="wrapper">
+<body id="colorForAllTrips" >
 <div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header">
-        <h1 style="color: blue; text-align: center">All Dream Trips</h1>
+        <h1>All Dream Trips</h1>
     </div>
-
     <c:forEach items="${tripReports}" var="report">
         <div class="col-sm-7">
             <div class="panel panel-default">
@@ -29,6 +29,12 @@
                         I arrived to ${report.city} and stayed in ${report.hotel}. During this trip I ${report.activity}.<br />
                         Total cost for the trip was <b>$${report.cost}</b>.
                 </div>
+                <div>
+                    <a href="/travelAdventure/updateTrip?id=${report.tripId}">Update</a>
+                    <form  method="post" action="/travelAdventure/deleteTrip?id=${report.tripId}">
+                        <INPUT TYPE="SUBMIT" VALUE="Delete" class="bt btn-primary btn-sm ">
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -36,9 +42,7 @@
 
 
 </div>
-
-
 </body>
-<jsp:include page="contentEnd.jsp" />
+</div>
 <jsp:include page="footer.jsp" />
 </html>

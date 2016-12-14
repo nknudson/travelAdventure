@@ -26,6 +26,10 @@ public class TripDao {
             return trips;
         }
 
+    /** Return a list of all countries
+     *
+     * @return All countries
+     */
         public List<String> getAllCountries() {
             List<String> countries = new ArrayList<String>();
             Session session = SessionFactoryProvider.getSessionFactory().openSession();

@@ -1,5 +1,7 @@
 package edu.matc.entity;
 import javax.persistence.*;
+import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  * Created by nataliya.knudson on 10/19/2016.
@@ -7,31 +9,31 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user_role")
 //@IdClass(UsersRolesPK.class)
-public class UserRole {
+public class UserRole  implements Serializable{
     private String userName;
     private String role;
 
     @Id
-    @Column(name = "user_name", nullable = false, length = 10)
+    @Column(name = "user_name", nullable = false, length = 15)
+
     public String getUserName() {
         return userName;
     }
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
     @Id
     @Column(name = "role_name", nullable = false, length = 15)
+
     public String getRole() {
         return role;
     }
-
     public void setRole(String role) {
         this.role = role;
     }
 
-    @Override
+    /**@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -44,12 +46,6 @@ public class UserRole {
             return false;
 
         return true;
-    }
+    }*/
 
-    @Override
-    public int hashCode() {
-        int result = userName != null ? userName.hashCode() : 0;
-        result = 31 * result + (role != null ? role.hashCode() : 0);
-        return result;
-    }
 }

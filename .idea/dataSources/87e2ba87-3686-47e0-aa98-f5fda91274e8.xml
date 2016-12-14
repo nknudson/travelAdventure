@@ -11,55 +11,120 @@
     <schema id="6" name="sys"/>
     <schema id="7" name="weekfive"/>
     <schema id="8" name="world"/>
-    <schema id="9" name="travelinfo"/>
+    <schema id="9" name="travelinfo">
+      <visible>1</visible>
+    </schema>
     <table id="10" parent="1" name="trips"/>
     <table id="11" parent="1" name="users"/>
-    <column id="12" parent="10" name="id">
+    <table id="12" parent="9" name="trip"/>
+    <table id="13" parent="9" name="user"/>
+    <table id="14" parent="9" name="user_role"/>
+    <column id="15" parent="10" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="13" parent="10" name="country">
+    <column id="16" parent="10" name="country">
       <data-type>varchar(25)|0</data-type>
     </column>
-    <column id="14" parent="10" name="city">
+    <column id="17" parent="10" name="city">
       <data-type>varchar(30)|0</data-type>
     </column>
-    <column id="15" parent="10" name="hotel">
+    <column id="18" parent="10" name="hotel">
       <data-type>varchar(30)|0</data-type>
     </column>
-    <column id="16" parent="10" name="activity">
+    <column id="19" parent="10" name="activity">
       <data-type>varchar(40)|0</data-type>
     </column>
-    <column id="17" parent="10" name="begin_date">
+    <column id="20" parent="10" name="begin_date">
       <data-type>date|0</data-type>
     </column>
-    <column id="18" parent="10" name="end_date">
+    <column id="21" parent="10" name="end_date">
       <data-type>date|0</data-type>
     </column>
-    <column id="19" parent="10" name="cost">
+    <column id="22" parent="10" name="cost">
       <data-type>decimal(8,2)|0</data-type>
     </column>
-    <key id="20" parent="10" name="PRIMARY">
+    <key id="23" parent="10" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="21" parent="11" name="id">
+    <column id="24" parent="11" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="22" parent="11" name="first_name">
+    <column id="25" parent="11" name="first_name">
       <data-type>varchar(25)|0</data-type>
     </column>
-    <column id="23" parent="11" name="last_name">
+    <column id="26" parent="11" name="last_name">
       <data-type>varchar(30)|0</data-type>
     </column>
-    <column id="24" parent="11" name="date_of_birth">
+    <column id="27" parent="11" name="date_of_birth">
       <data-type>date|0</data-type>
     </column>
-    <key id="25" parent="11" name="PRIMARY">
+    <key id="28" parent="11" name="PRIMARY">
       <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="29" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="30" parent="12" name="country">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="31" parent="12" name="city">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="32" parent="12" name="hotel">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="33" parent="12" name="activity">
+      <data-type>varchar(40)|0</data-type>
+    </column>
+    <column id="34" parent="12" name="begin_date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="35" parent="12" name="end_date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="36" parent="12" name="cost">
+      <data-type>decimal(8,2)|0</data-type>
+    </column>
+    <key id="37" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="38" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="39" parent="13" name="user_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <column id="40" parent="13" name="user_pass">
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <key id="41" parent="13" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="42" parent="14" name="user_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <column id="43" parent="14" name="role_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <key id="44" parent="14" name="PRIMARY">
+      <columns>user_name
+role_name</columns>
       <primary>1</primary>
     </key>
   </database-model>

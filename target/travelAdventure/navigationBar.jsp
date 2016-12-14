@@ -26,9 +26,6 @@
             case 'signInConfirmation.jsp':
                 $('#signInConfirmation').addClass("active");
                 break;
-            case 'about.jsp':
-                $('#about').addClass("active");
-                break;
             case 'signUp.jsp':
                 $('#signUp').addClass("active");
                 break;
@@ -48,14 +45,27 @@
 
             <img src="http://cdn.adventuretravel.biz/wp-content/uploads/2014/04/ATTA-Logo-CMYK-white-URL.png?x66985" alt="Adventure Travel Trade Association" style="width: 100%;"></a>
 
+
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li style="font-size: 20px" id="index"><a href="index">Home</a></li>
                 <li style="font-size: 20px" id="viewTrips"><a href="displayTrip"> All Trips</a></li>
                 <li style="font-size: 20px" id="addTrip"><a href="addTrip">Add a Trip</a></li>
-                <li style="font-size: 20px" id="signUp"><a href="signUp.jsp">Sign Up</a></li>
+                <li style="font-size: 20px" id="signUp"><a href="signUp">Sign Up</a></li>
 
             </ul>
+            <br />
+            <form action="${pageContext.request.contextPath}/logout" method="post">
+                <input type="submit" value="Logout" class="bt btn-primary btn-sm "/>
+            </form>
+
         </div><!--/.nav-collapse -->
+
+
         </div>
+
+
+
 </nav>
+
+

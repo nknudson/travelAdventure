@@ -10,18 +10,19 @@
 <jsp:include page="navigationBar.jsp" />
 <jsp:include page="head.jsp" />
 <html>
+<div class="wrapper">
 <body role="document" style="background-color: yellow;" >
 
 <div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header" class="jumbotron">
-        <h1 style="color: blue; text-align: center">Whoops! </h1>
+        <h1>Whoops! </h1>
     </div>
-
-    <h3 style="text-align: center">Invalid userid/password combination.
-<a href="login.jsp"> Please try again</a></h3>
+    <div class="mainText">
+    <h3 style="text-align: center">Invalid userid/password combination. Please <b><a href="login.jsp"> try again. </a></b> If you are a new user, <b><a href="signUp.jsp">  sign up </a></b> first </h3>
+    </div>
     </div>
 </body>
-<jsp:include page="contentEnd.jsp" />
+</div>
 <jsp:include page="footer.jsp" />
 </html>
 

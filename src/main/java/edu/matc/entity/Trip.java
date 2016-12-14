@@ -101,11 +101,11 @@ public class Trip {
         this.activity = activity;
     }
 
-    public int getTripid() {
+    public int getTripId() {
         return tripId;
     }
 
-    public void setTripid(int tripid) {
+    public void setTripId(int tripid) {
         this.tripId = tripid;
     }
 

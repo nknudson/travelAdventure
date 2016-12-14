@@ -9,16 +9,18 @@
 <jsp:include page="navigationBar.jsp" />
 <jsp:include page="head.jsp" />
 <html>
-<body role="document" style="background-color: yellow;" >
+<div class="wrapper">
+<body role="document" >
 
 <div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header" class="jumbotron">
-        <h1 style="color: blue; text-align: center">Congratulations! </h1>
+        <h1>Congratulations! </h1>
     </div>
-
-    <h3 style="text-align: center">Your trip was successfully added to the list. Click <a href="displayTrip">here</a> to view it.</h3>
+    <div class="mainText">
+    <h3 style="text-align: center">Your entry was successfully added.</h3>
+    </div>
     </div>
 </body>
-<jsp:include page="contentEnd.jsp" />
+</div>
 <jsp:include page="footer.jsp" />
 </html>

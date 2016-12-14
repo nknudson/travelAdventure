@@ -12,18 +12,19 @@
 <jsp:include page="navigationBar.jsp" />
 <jsp:include page="head.jsp" />
 <html>
-<body role="document" style="background-color: yellow;" >
+<div class="wrapper">
+<body role="document"  >
 
 <div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header" class="jumbotron">
         <h1 style="color: blue; text-align: center">Welcome to the Magical World of Travel </h1>
 </div>
-
-    <h3 style="text-align: center">If you are curious when is the best time to start planning your vacation the answer is...</h3>
-    <h2 style="text-align: center"> on <i><nk:Date /></i> -- which is <b>TODAY</b>!</h2>
-    <h3 style="text-align: center">Our website provides information on countries from all over the world! Here you can find a list of activities to do, hotels to stay and approximate budget necessary for trip expenses. </h3>
+<div class="mainText">
+    <h3>If you are curious when is the best time to start planning your vacation the answer is...</h3>
+    <h2> on <i><nk:Date /></i> -- which is <b>TODAY</b>!</h2>
+    <h3>Our website provides information on countries from all over the world! Here you can find a list of activities to do, hotels to stay and approximate budget necessary for trip expenses. </h3>
     <h3 >Are you ready for adventure?</h3>
-    <form  method="post" action="/travelAdventure/searchTrip" role = "form" >
+    <form  method="post" action="/travelAdventure/searchTrip" role = "form" id="indexInput">
         <table>
 
             <tr>
@@ -40,10 +41,9 @@
     </form>
 
 </div>
-
-
+   </div>
 </body>
-<jsp:include page="contentEnd.jsp" />
+</div>
 <jsp:include page="footer.jsp" />
 </html>
 

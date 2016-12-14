@@ -1,5 +1,17 @@
 package edu.matc.entity;
 import javax.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
+import org.apache.log4j.Logger;
+import org.hibernate.annotations.*;
+
+import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.LocalDate;
+import edu.matc.util.LocalDateAttributeConverter;
+import org.hibernate.annotations.GenericGenerator;
+import java.time.Period;
+import static java.time.LocalDate.now;
 
 /**
  * Created by nataliya.knudson on 10/19/2016.
@@ -8,32 +20,35 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User {
 
-    private int id;
+    //private int id;
+    @Column(name = "user_name", nullable = true, length = 15)
     private String userName;
+    @Column(name = "user_pass", nullable = true, length = 15)
     private String password;
 
     public User() {
     }
 
-    public User(int id, String userName, String password) {
-        this.id = id;
+    public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
     }
 
-    @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy=GenerationType.AUTO)
     public int getId() {
-        return id;
+        return Id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        Id = id;
     }
 
-    @Basic
-    @Column(name = "user_name", nullable = true, length = 15)
+    @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+
+    @Column(name = "id")
+    private int Id;
+
     public String getUserName() {
         return userName;
     }
@@ -42,8 +57,6 @@ public class User {
         this.userName = userName;
     }
 
-    @Basic
-    @Column(name = "user_pass", nullable = true, length = 15)
     public String getPassword() {
         return password;
     }
@@ -51,28 +64,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-// Compares with database id and password
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
 
-        User users = (User) o;
 
-        if (id != users.id) return false;
-        if (userName != null ? !userName.equals(users.userName) : users.userName != null)
-            return false;
-        if (password != null ? !password.equals(users.password) : users.password != null)
-            return false;
-
-        return true;
-    }
-// Identical IDs
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (userName != null ? userName.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        return result;
-    }
 }

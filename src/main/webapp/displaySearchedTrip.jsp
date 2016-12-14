@@ -13,78 +13,8 @@
 <jsp:include page="navigationBar.jsp" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-   <%-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA0PIMpvt1rg0PvK_PKX6pm85leZYAKfY&sensor=false">
-    </script>--%>
-
-
-
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-            <meta charset="utf-8">
-            <style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-        height: 50%;
-    }
-    </style>
-
-
-
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-            height: 60%;
-            width: 100%;
-        }
-
-        /* Optional: Makes the sample page fill the window. */
-
-        .controls {
-            background-color: #fff;
-            border-radius: 2px;
-            border: 1px solid transparent;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            box-sizing: border-box;
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 300;
-            height: 29px;
-            margin-left: 17px;
-            margin-top: 10px;
-            outline: none;
-            padding: 0 11px 0 13px;
-            text-overflow: ellipsis;
-            width: 400px;
-        }
-
-        .controls:focus {
-            border-color: #4d90fe;
-        }
-        .title {
-            font-weight: bold;
-        }
-        #infowindow-content {
-            display: none;
-        }
-        #map #infowindow-content {
-            display: inline;
-        }
-
-        .panel-heading  {
-           background-color: lightblue;
-            color: blue;
-        }
-
-    </style>
-
-</head>
-
-
-<body style="background-color: yellow;" >
+<div class="wrapper">
+    <body id="colorForAllTrips" >
 <div class="container theme-showcase" role="main" class="jumbotron"  >
     <div class="page-header">
         <h1 style="color: blue; text-align: center">Selected Dream Trip Info</h1>
@@ -102,10 +32,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
 <div>
 <input id="pac-input" class="controls" type="text"
        placeholder="Enter a location">
@@ -188,16 +114,13 @@
         });
     }
 </script>
-
-
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA0PIMpvt1rg0PvK_PKX6pm85leZYAKfY&libraries=places&callback=initMap" async defer></script>
 
 </div>
-</div>
+
 </body>
 
-<jsp:include page="contentEnd.jsp" />
+</div>
 <jsp:include page="footer.jsp" />
 
 </html>

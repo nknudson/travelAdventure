@@ -23,18 +23,26 @@ public class ViewTrips extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+    private void doCommon(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         TripDao dao = new TripDao();
         List<Trip> reports = dao.getAllTrips();
         req.setAttribute("tripReports", reports);
         log.debug("Sending back the trip reports...");
 
 
-         RequestDispatcher dispatcher = req.getRequestDispatcher("/displayTrip" +
-              ".jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/displayTrip.jsp");
         dispatcher.forward(req, resp);
     }
-}
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        doCommon(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        doCommon(req, resp);
+    }
+}

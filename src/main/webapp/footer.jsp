@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <div id="footer" class="footer">
-    <div class="container theme-showcase" role="main">
+    <div class="footer-content" role="main">
 
 
         &copy; Copyright
