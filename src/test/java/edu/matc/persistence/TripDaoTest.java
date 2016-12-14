@@ -67,10 +67,8 @@ public class TripDaoTest {
         public void updateTrip() throws Exception {
             Trip updatedTrip =  dao.getTrip(5);
             String currentCity = updatedTrip.getCity();
-            //updatedTrip.setCity(currentCity + "x");
             updatedTrip.setCity(currentCity);
             dao.updateTrip(updatedTrip);
-            //assertEquals((currentCity + "y"),dao.getTrip(5).getCity());
             assertEquals((currentCity),dao.getTrip(5).getCity());
 
             updatedTrip.setCity(currentCity);

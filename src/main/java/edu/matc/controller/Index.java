@@ -22,8 +22,10 @@ import java.io.IOException;
 )
 
 public class Index extends HttpServlet {
+
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    // Selecting list of countries for dropdown
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("In the doGet() for Index");

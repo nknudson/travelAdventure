@@ -25,5 +25,18 @@
 | 10/19/16 | Individualproject: displaying list of trips | 6  |  |
 | 10/25/16 | Individual project: user authorization| 6  |  |
 | 10/26/16 | presentation feedback. Individual project: JSPs | 4  |  |
+| 10/26/16 | extracurricular presentation 2 | 2  |  |
 | 10/31/16 | Team project| 5 |  |
 | 11/01/16 | Code review, presentation feedback, time log | 2  |  |
+| 11/03/16 | power point for presentation 2 | 5  |  |
+| 11/09/16 | Exercise, feedback| 4  |  |
+| 11/16/16 | poer point for team project | 6  |  |
+| 11/22/16 | Search function| 2.5 |  |
+| 11/30/16 | Exercise, feedback| 3 |  |
+| 12/5/16 | add trip form | 3  |  |
+| 12/7/16 |  presentation feedback, code review | 1  |  |
+| 12/8/16 |  tests | 1  |  |
+| 12/11/16 | delete/update functionality| 3  |  |
+| 12/12/16 | tests, JSPs | 8  |  |
+| 12/13/16 | JUnit tests| 2 |  |
+| 12/14/16 | All wrap ups...  and log out page | 8  |  |

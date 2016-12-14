@@ -51,8 +51,10 @@ public class UpdateTrip extends HttpServlet {
 
         logger.info("Update Trip" + countryInput + " " + cityInput + " " + hotelInput
                 + " " + activityInput + " " + beginDateInput + " " + endDateInput + " " + costInput);
+
         Trip existingTrip = new Trip (countryInput, cityInput, hotelInput, activityInput, LocalDate.parse(beginDateInput),
                 LocalDate.parse(endDateInput), Double.parseDouble(costInput));
+
         existingTrip.setTripId(Integer.parseInt(id));
 
         tripData.updateTrip(existingTrip);

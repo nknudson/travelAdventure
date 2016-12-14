@@ -20,6 +20,7 @@ import java.time.LocalDate;
         urlPatterns = {"/deleteTrip"}
 )
 public class DeleteTrip extends HttpServlet {
+
     private final Logger logger = Logger.getLogger(this.getClass());
 
     @Override
@@ -35,12 +36,14 @@ public class DeleteTrip extends HttpServlet {
         logger.info("Delete Trip" + id);
 
         Boolean result = tripData.deleteTrip(Integer.parseInt(id));
+
         RequestDispatcher dispatcher;
-        if (result) {
+        dispatcher = req.getRequestDispatcher("/displayTrip");
+        /**if (result) {
             dispatcher = req.getRequestDispatcher("/displayTrip");
         } else {
             dispatcher = req.getRequestDispatcher("/deleteFailed.jsp");
-        }
+        }*/
         dispatcher.forward(req, resp);
     }
 }

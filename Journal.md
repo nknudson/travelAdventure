@@ -22,7 +22,7 @@ Tasks Completed:
 * Created mockup screens
 * Started looking for extracurricular activities
 
-I will be using Google Maps ( https://developers.google.com/maps/web-services/overview?hl=en) to show the location of the countries
+I will be using Google Maps ( https://maps.googleapis.com/maps/api/) to show the location of the countries
 ### Week 3
 
 09/14/2016
@@ -48,3 +48,85 @@ Tasks Completed:
 
 Tasks Completed:
  * Did exercise 5 and readings
+
+### Week 6
+
+ 10/12/2016
+
+ Tasks Completed:
+  * Did class activities and exercise
+
+### Week 7
+
+ 10/19/2016
+
+ Tasks Completed:
+  * Did class activities and exercise
+
+
+### Week 8
+
+  10/26/2016
+
+  Tasks Completed:
+  * Did class activities and exercise
+  * Completed peer code reviews
+
+### Week 9
+
+  11/02/2016
+
+  Tasks Completed:
+   * team project
+
+
+### Week 10
+
+  11/09/2016
+
+  Tasks Completed:
+   * Exercise
+   * extracurricular activity power point 2
+### Week 11
+
+   11/16/2016
+
+   Tasks Completed:
+    * Team project
+    * presentation feedbacks
+### Week 12
+
+   11/23/2016
+
+   Tasks Completed:
+    * presentation feedbacks
+
+
+### Week 13
+
+   11/30/2016
+
+   Tasks Completed:
+    * exercise
+    * presentation feedbacks
+
+### Week 14
+
+    12/07/2016
+
+    Tasks Completed:
+     * Code review
+     * presentation feedbacks
+     * add trip
+     * JUnit tests
+
+### Week 15
+
+    12/14/2016
+
+    Tasks Completed:
+     * Individual project finished:
+     -delete trip
+     -update trip
+     -sign up user
+     -loggin out

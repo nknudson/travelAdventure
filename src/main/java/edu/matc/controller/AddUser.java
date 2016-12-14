@@ -43,10 +43,10 @@ public class AddUser extends HttpServlet {
         String userNameInput = req.getParameter("userName");
         String passwordInput = req.getParameter("password");
 
-
+        // Logging user info
         logger.info("New User " + userNameInput + " " + passwordInput);
-        User newUser = new User (userNameInput, passwordInput);
 
+        User newUser = new User(userNameInput, passwordInput);
 
         req.setAttribute("user ", userData.addUser(newUser));
         RequestDispatcher dispatcher = req.getRequestDispatcher("/confirmation.jsp");

@@ -20,13 +20,13 @@ import java.time.LocalDate;
         urlPatterns = {"/addTrip"}
 )
 public class AddTrip extends HttpServlet {
+    //Logger
     private final Logger logger = Logger.getLogger(this.getClass());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/addTrip" +
-                ".jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/addTrip" + ".jsp");
         dispatcher.forward(req, resp);
     }
 
@@ -46,9 +46,11 @@ public class AddTrip extends HttpServlet {
         String endDateInput = req.getParameter("endDate");
         String costInput = req.getParameter("cost");
 
+        //Logging trip info
         logger.info("New Trip" + countryInput + " " + cityInput + " " + hotelInput
                 + " " + activityInput + " " + beginDateInput + " " + endDateInput + " " + costInput);
-        Trip newTrip = new Trip (countryInput, cityInput, hotelInput, activityInput, LocalDate.parse(beginDateInput),
+
+        Trip newTrip = new Trip(countryInput, cityInput, hotelInput, activityInput, LocalDate.parse(beginDateInput),
                 LocalDate.parse(endDateInput), Double.parseDouble(costInput));
 
         req.setAttribute("trip", tripData.addTrip(newTrip));

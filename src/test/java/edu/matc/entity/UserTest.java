@@ -53,25 +53,4 @@ public class UserTest {
 
     }
 
-   /** @Test
-    public void equals() throws Exception {
-        //assertFalse(user.equals("amar,katar"));
-
-       // assertTrue(user.equals("weas,sdzx"));
-               //assertEquals( false,user.equals(""));
-        assertEquals( false,user.equals("olya, panda"));
-
-
-    }
-
-
-
-
-    @Test
-    public void toStringTest() throws Exception {
-        String testUser= "User{user name='amar', user password='katar}";
-        assertEquals(testUser, user.toString());
-    }*/
-
-
 }
